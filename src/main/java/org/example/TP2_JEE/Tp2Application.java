@@ -17,9 +17,9 @@ public class Tp2Application {
     @Bean
     CommandLineRunner start(ProductRepository productRepository) {
         return args -> {
-            productRepository.save(new Product("HP Laptop", 800.0, 15));
-            productRepository.save(new Product("MacBook Pro", 1200.0, 10));
-            productRepository.save(new Product("Dell XPS", 1000.0, 8));
+            productRepository.save(new Product("Intell", 800.0, 15));
+            productRepository.save(new Product("Dell", 1200.0, 10));
+            productRepository.save(new Product("HP", 1000.0, 8));
 
             productRepository.findAll().forEach(System.out::println);
         };
