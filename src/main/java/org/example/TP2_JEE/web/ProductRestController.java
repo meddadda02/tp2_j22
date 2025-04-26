@@ -1,9 +1,12 @@
 package org.example.TP2_JEE.web;import org.example.TP2_JEE.entities.Product;
 import org.example.TP2_JEE.repository.ProductRepository;
-import org.springframework.web.bind.annotation.*;import java.util.List;
+import org.springframework.web.bind.annotation.*;
+import java.util.List;
 import java.util.Optional;@RestController
 @RequestMapping("/products")
-public class ProductRestController {    private final ProductRepository productRepository;    public ProductRestController(ProductRepository productRepository) {
+public class ProductRestController {
+    private final ProductRepository productRepository;
+    public ProductRestController(ProductRepository productRepository) {
         this.productRepository = productRepository;
     }    //   Tous les produits
     @GetMapping
